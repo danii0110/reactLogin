@@ -4,6 +4,10 @@ export default function Login() {
 const [email, setEmail] = useState('');
 const [pw, setPw] = useState("");
 
+const handleEmail = (e) => {
+    setEmail(e.target.value);
+}
+
     return (
         <div className='page'>
             <div className='titleWrap'>
@@ -17,7 +21,7 @@ const [pw, setPw] = useState("");
                     className='input'
                     placeholder='test@gmail.com'
                     value={email}
-                    onChange={(e)=>setEmail(e.target.value)}/>
+                    onChange={handleEmail}/>
                 </div>
                 <div className='errorMessageWrap'>
                     올바른 이메일을 입력해주세요.
